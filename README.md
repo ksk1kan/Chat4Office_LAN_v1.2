@@ -1,3 +1,5 @@
+# Chat4Office (LAN Web App) v1.2
+
 Bu sürümde:
 - ✅ DM okundu bilgisi + okunmayan sayaç
 - ✅ Not/hatırlatma okundu bilgisi
@@ -26,7 +28,7 @@ En stabil yöntem:
 - Admin panelde Ses URL: `/notify.wav`
 
 ------------------------------------------------------
-# Chat4Office (LAN Web App) v1.1
+# Chat4Office (LAN Web App) v1.2
 
 What’s included in this version:
 - ✅ DM read receipts + unread counter
