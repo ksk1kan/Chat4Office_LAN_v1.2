@@ -1,0 +1,27 @@
+{
+  "users": [
+    {
+      "id": "u_admin",
+      "username": "admin",
+      "displayName": "Admin",
+      "role": "admin",
+      "pwSalt": "243f697de5c2575fecff3aa9f69cb190",
+      "pwHash": "f59109bd30e6301ecf8ce7196fcc99b2cd4a83798bcaa7be619d8feb93bff63d",
+      "avatarUrl": null,
+      "createdAt": 1770653796826
+    }
+  ],
+  "messages": [],
+  "dmConversations": [],
+  "groups": [],
+  "groupMessages": [],
+  "groupConversations": [],
+  "notes": [],
+  "activity": [],
+  "settings": {
+    "officeName": "Chat4Office",
+    "reminderSoundUrl": "/sounds/notify.wav",
+    "dmSoundUrl": "/sounds/dm.wav",
+    "maxUploadMb": 15
+  }
+}

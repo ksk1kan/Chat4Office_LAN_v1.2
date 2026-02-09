@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="tr"><head>
+<meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Chat4Office - Giriş</title><link rel="stylesheet" href="/app.css"/>
+</head><body>
+<div class="wrap" style="justify-content:center;align-items:center;padding:24px;">
+  <div class="panel" style="width:min(520px,100%);">
+    <h3>Chat4Office <span class="badge">LAN</span></h3>
+    <div style="padding:14px;">
+      <div class="smallMuted" style="margin-bottom:12px;">Kullanıcı adı ve şifrenle giriş yap.</div>
+      <div class="grid2">
+        <input id="username" class="input" placeholder="Kullanıcı adı" autocomplete="username"/>
+        <input id="password" class="input" placeholder="Şifre" type="password" autocomplete="current-password"/>
+      </div>
+      <div style="display:flex;gap:10px;align-items:center;margin-top:12px;">
+        <button id="btnLogin" class="btn primary">Giriş Yap</button>
+        <div id="err" class="smallMuted"></div>
+      </div>
+      <div style="margin-top:14px" class="smallMuted">
+        İlk giriş: <span class="kbd">admin</span> / <span class="kbd">admin1234</span>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+async function login(){
+  const username = document.getElementById('username').value.trim();
+  const password = document.getElementById('password').value;
+  const err = document.getElementById('err');
+  err.textContent = '';
+  try{
+    const r = await fetch('/api/login',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({username,password})});
+    if(!r.ok){ err.textContent = 'Hatalı kullanıcı adı/şifre.'; return; }
+    location.href = '/index.html';
+  }catch(e){ err.textContent = 'Bağlantı hatası.'; }
+}
+document.getElementById('btnLogin').onclick = login;
+document.getElementById('password').addEventListener('keydown', (e)=>{ if(e.key==='Enter') login(); });
+</script>
+</body></html>

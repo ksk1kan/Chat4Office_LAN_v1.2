@@ -1,0 +1,16 @@
+{
+  "name": "chat4office",
+  "version": "1.2.0",
+  "private": true,
+  "description": "LAN icin ofis ici DM + grup + not/hatirlatma sistemi (okundu + log + dosya/gorsel)",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "express-session": "^1.17.3",
+    "socket.io": "^4.7.5",
+    "multer": "^1.4.5-lts.1"
+  }
+}
